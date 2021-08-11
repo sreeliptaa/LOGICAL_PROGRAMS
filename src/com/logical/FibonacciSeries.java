@@ -1,6 +1,24 @@
 package com.logical;
+
 import java.util.Scanner;
+/**
+ * Print the Fibonacci Series
+ * @author Sreelipta
+ */
 public class FibonacciSeries {
+
+    public static void main(String[] args) {
+        //
+        System.out.println("Welcome to Fibonacci Series");
+        System.out.println("Enter number");
+        Scanner sc =new Scanner(System.in);
+        int number=sc.nextInt();
+        if(number>0) {
+            fibonacciTerms(number);
+        }else{
+            System.out.println("Incorrect Input");
+        }
+    }
     static void fibonacciTerms(int number){
         int term1=0,term2=1,term3;
         if(number==1){
@@ -16,17 +34,5 @@ public class FibonacciSeries {
             }
         }
     }
-
-    public static void main(String[] args) {
-        // write your code here
-        System.out.println("Welcome to Fibonacci Series");
-        System.out.println("Give number: (N>0)");
-        Scanner sc =new Scanner(System.in);
-        int number=sc.nextInt();
-        if(number>0) {
-            fibonacciTerms(number);
-        }else{
-            System.out.println("Incorrect Input");
-        }
-    }
 }
+
